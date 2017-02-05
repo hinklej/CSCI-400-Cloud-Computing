@@ -3,6 +3,21 @@
 	<link rel="stylesheet" type="text/css" href="main.css"
 </head>
 <body>
+
+<?php
+$size = 5
+
+if(isset($_POST['info']))
+{
+$size = $_POST['info']
+}
+?>
+
+<form method="POST">
+      Enter Information:<input type="string" name="info">
+      <input type="submit">
+</form>
+
  <?php
 
         $size = 5
