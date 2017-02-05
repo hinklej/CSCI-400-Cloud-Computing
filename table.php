@@ -1,3 +1,4 @@
+<html>
 <head>
 	<title>Project 1</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
