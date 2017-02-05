@@ -18,7 +18,7 @@ if( isset($_POST['info'])) {
    $size = $_POST['info'];
 }
 
-echo 'table border = "1">',"\n";
+echo '<table border = "1">',"\n";
 for($y = 0; $y < $size; $y++) {
  	echo "<tr>\n";
 	for($x = 0; $x < $size; $x++) {
