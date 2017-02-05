@@ -19,21 +19,19 @@ $size = $_POST['info']
 </form>
 
  <?php
-
-        $size = 5
-
-        echo '<table border = "1">'\n'
-        for($y = 0; $y < $size; $y++){
-        echo "<tr>"\n;
-        for($x = 0; $x < $size; $x++){
-          echo " <td>"
-          echo $x * $y
-          echo "</td>"\n
-          }
-          echo "</tr>"\n
-          }
-
-          echo "<table>"\n
+echo 'table border = "1">' \n"
+for($y = 0; $y = $size; $y++)
+{
+echo "<tr>\n"
+for($x = 0; $x < $size; $x++)
+{
+echo "	<td>"
+echo $x * $y
+echo "</td>\n"
+}
+echo "</tr\n"
+}
+echo "</table\n"
 
 ?>
 </body>
