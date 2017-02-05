@@ -1,5 +1,5 @@
 <head>
-	<title>Cloud Computing & Big Data</title>
+	<title>Project 1</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
