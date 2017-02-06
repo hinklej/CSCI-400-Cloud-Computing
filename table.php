@@ -13,16 +13,15 @@
 <?php
 
 $size = 10;
-$zerocatch = false;
 
 if( isset($_POST['info'])) {
    $size = $_POST['info'];
 }
 
 echo '<table border = "1">',"\n";
-for($y = 0; $y < $size; $y++) {
+for($y = 1; $y <= $size; $y++) {
  	echo "<tr>\n";
-	for($x = 1; $x < $size; $x++) {
+	for($x = 1; $x <= $size; $x++) {
 		echo "	<td>";
 		echo $x * $y;
 		echo "</td>\n";
