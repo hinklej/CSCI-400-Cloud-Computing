@@ -26,12 +26,13 @@ for($y = 0; $y < $size; $y++) {
 		if($y == 0) {
 			for($z = 0; $z < $size; $z++) {
 				echo $z;
+				echo "</td>\n";
 			}
 		}
 		else {
 			echo $x * $y;
+			echo "</td>\n";
 		}
-		echo "</td>\n";
 	}
 	echo "</tr\n";
 }
