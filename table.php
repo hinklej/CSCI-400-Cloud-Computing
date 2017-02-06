@@ -23,7 +23,14 @@ for($y = 0; $y < $size; $y++) {
  	echo "<tr>\n";
 	for($x = 0; $x < $size; $x++) {
 		echo "	<td>";
-		echo $x * $y;
+		if($y == 0) {
+			for($z = 0; $z < $size; $z++) {
+				echo $z;
+			}
+		}
+		else {
+			echo $x * $y;
+		}
 		echo "</td>\n";
 	}
 	echo "</tr\n";
