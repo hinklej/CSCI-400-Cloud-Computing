@@ -13,6 +13,7 @@
 <?php
 
 $size = 10;
+$zerocatch = false;
 
 if( isset($_POST['info'])) {
    $size = $_POST['info'];
@@ -21,20 +22,10 @@ if( isset($_POST['info'])) {
 echo '<table border = "1">',"\n";
 for($y = 0; $y < $size; $y++) {
  	echo "<tr>\n";
-	for($x = 0; $x < $size; $x++) {
-		if($y == 0) {
-			for($z = 0; $z < $size; $z++) {
-				echo "	<td>";
-				echo $z;
-				echo "</td>\n";
-			}
-			break;
-		}
-		else {
-			echo "	<td>";
-			echo $x * $y;
-			echo "</td>\n";
-		}
+	for($x = 1; $x < $size; $x++) {
+		echo "	<td>";
+		echo $x * $y;
+		echo "</td>\n";
 	}
 	echo "</tr\n";
 }
