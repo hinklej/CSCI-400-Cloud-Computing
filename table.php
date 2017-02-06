@@ -4,9 +4,10 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<h1>Multiplication Table</h1>
 
 <form method="POST">
-      Enter Information:<input type="string" name="info">
+      Enter Size of Table:<input type="string" name="info">
       <input type="submit">
 </form>
 
