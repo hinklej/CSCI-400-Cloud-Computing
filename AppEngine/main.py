@@ -34,8 +34,8 @@ def isprime(n):
     number = 2
     if request.method == 'GET' and number_numbers in request.args:
            number = request.args['number_numbers']
-              number = memcache.get('numbers').split('/')
-                 if number in numbers
+              numbers = memcache.get('numbers').split('/')
+                 if number in numbers:
                         memcache.incr(number)
                            else
                                   memcache.set('numbers', memcache.get('names') + '/' + number)
