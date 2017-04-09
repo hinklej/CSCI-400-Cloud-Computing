@@ -29,7 +29,7 @@ def isprime(n):
         if n % x == 0:
             return False
     return True
-    n = numbers
+    numbers = n
     memcache.add('numbers', '')
     number = 2
     if request.method == 'GET' and number_numbers in request.args:
