@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<title>Cloud Computing & Big Data</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<!-- Home page info -->
+	<h1>CSCI 400 Cloud Computing & Big Data</h1>
+	<h2>Welcome, {{nickname}}!</h2>
+	<a href="{{logouturl}}">logout</a>
+	<p>P03 Google AppEngine<br>
+	Prime Number Validator
+	<h3>Welcome to the Prime Number Validator</h3>
+  <div style ="float:right">
+    <table width="200" border="1">
+      {% for p in primeNums %}
+      <tr>
+	<td>{{p.0}}</td>
+	<td>{{p.1}}</td>
+	</tr>
+      {% endfor %}
+      </table>
+    </div>
+  
+  <form method="get" action="{{url_for('isprime')}}">
+    <label for="number"> Number:</label>
+    <input type="text" number="number_numbers" value="{{number}}"><br />
+    
+    <input type="submit">
+    </form>
+	<!-- Group Info -->
+	<address>Cloud 2017<br>
+	Group 4<br>
+	Jacob Hinkle, Nathaniel Law
+</body>
+</html>
