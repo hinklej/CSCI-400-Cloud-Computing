@@ -9,11 +9,12 @@ app.config['DEBUG'] = True
 primeNums = []
 isPrime = False
 
-@app.route('/')
+@app.route('/') #methods = ['POST'])
 def isprime():
 
     user = users.get_current_user()
     global isPrime
+    #n = request.form['number_numbers']
     number = 199
     
     if user:
