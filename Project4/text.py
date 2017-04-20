@@ -4,14 +4,9 @@ from itertools import product
 from string import ascii_lowercase
 import hashlib
 
+
 # CLIENT #
 # mincemeat.py -l -p changeme
-
-# ONLY WORKS FOR d077f #
-
-       #SEE LINE 33
-
-########################
 
 
 if len(sys.argv) < 2:
@@ -20,30 +15,38 @@ if len(sys.argv) < 2:
 
 given = sys.argv[1]
 
+data = [1, 2, 3]
+
 numbers = '0123456789'
 
-keywords = []
-for n in range(1,5):
-    keywords = keywords + [''.join(i) for i in product(ascii_lowercase + numbers, repeat = n)]
+keywords = [''.join(i) for i in product(ascii_lowercase + numbers, repeat = 4)]
 
-datasource = dict(enumerate(keywords))
+#print keywords
+
+datasource = dict(enumerate(data))
+
+hexor = str(hashlib.md5('cats').hexdigest())[:5]
+print hexor
+
+#firstFive = hexor[:5]
+#print firstFive
 
 def mapfn(k, v):
-    hexit = str(hashlib.md5(v).hexdigest())[:5]
-    if(hexit == 'd077f'):
-        yield 'found', v
-      
+    print k, v
+    yield 'count', 1
+    
 def reducefn(k, vs):
-    return vs
+    result = sum(vs)
+    return result
 
 s = mincemeat.Server()
 s.datasource = datasource
 s.mapfn = mapfn
 s.reducefn = reducefn
 
-results = s.run_server(password="changeme")
-
 resultlist = []
+
+results = s.run_server(password="changeme")
 
 for k in results.keys():
         resultlist.append((k,results[k]))
